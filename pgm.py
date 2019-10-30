@@ -1,5 +1,5 @@
 """
-  pgm format processing methods that I downloaded online
+  pgm format processing methods that I downloaded from github
 """
 
 from numpy import array, int32
