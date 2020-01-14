@@ -1,5 +1,5 @@
 # vision-final
-Final project in CS 365: Computer Vision taught by Dr. Bruce Maxwell at Colby College in the spring of 2019.
+Final project in CS 365: Computer Vision taught by Bruce Maxwell at Colby College in the spring of 2019.
 
 An exploration of random patch noise removal from grayscale images with linear (Principal Component Analysis) and non-linear (Autoencoder) techniques.
 
