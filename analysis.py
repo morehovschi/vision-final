@@ -1,9 +1,7 @@
-"""
-    Marius Orehovschi
-    S19
-    Project 2: Data Management
-    CS 251
-"""
+# Marius Orehovschi
+# S19
+# Project 2: Data Management
+# CS 251
 
 # Modified as part of CS 251 Project 7 (Spring 2019)
 import math
@@ -207,7 +205,6 @@ def linear_regression(d, ind, dep, verbose=False):
     # return regression values
     return b, sse, r2, t, p
 
-
 def test_linear_regression(filename, ind, dep):
     """tests linear regression on parameter filename;"""
     """takes in a list of independent variable names and a dependent variable;"""
@@ -295,7 +292,6 @@ def kmeans_init(A, K):
 
     return returnable
 
-
 def kmeans_classify(A, codebook, p=2):
     """
     Given a data matrix A and a set of means in the codebook
@@ -319,7 +315,6 @@ def kmeans_classify(A, codebook, p=2):
         closestDists[i, 0] = dists[closestIDs[i, 0]]
 
     return closestIDs, closestDists
-
 
 def kmeans_algorithm(A, means, min_change=1e-7, max_iterations=100, p=2):
     """
@@ -414,7 +409,6 @@ def kmeans(d, headers, K, whiten=True):
     # return the codebook, codes, and representation error
     return codebook, codes, errors
 
-
 def kmeans_new(A, K, whiten=True, p=2):
     """
     performs K means clustering on A
@@ -458,7 +452,6 @@ def kmeans_new(A, K, whiten=True, p=2):
     # return the codebook, codes, and representation error
     return codebook, codes, errors
 
-
 def kmeans_quality(errors, K):
     """
     computes the decription length (a measure of quality of a clustering algorithm
@@ -471,7 +464,6 @@ def kmeans_quality(errors, K):
     sum = np.sum(squared)
 
     return sum + 0.5*K*np.log2(errors.shape[0])
-
 
 def getCumulativeValueList(values):
     """
@@ -572,7 +564,6 @@ def avg_recall(cmtx):
     # return the average class precision
     return np.mean(container)
 
-
 def f1_score(cmtx):
     """
     calculates f1 score of a confusion matrix using average class recall and average class precision
@@ -590,7 +581,48 @@ def f1_score(cmtx):
 
 
 def main():
-    pass
+    # # test for data_range()
+    # dataset = Data('testdata3.csv')
+    # mat = dataset.get_numeric_matrix()
+    # print('range: ', data_range(dataset, ['headers', 'spaces']))  # should print 'range: (1, 10)'
+    #
+    # # test for mean()
+    # print('means: ', mean(dataset, ['headers', 'spaces']))  # should print 'means: [5.0, 6.0]'
+    #
+    # # test for stdev()
+    # # should print out 'st devs:  [3.265986323710904, 3.265986323710904]'
+    # print('st devs: ', stdev(dataset, ['headers', 'spaces']))
+    #
+    # print('normalized matrix: \n', normalize_columns_together(dataset, ['headers', 'spaces']))
+    #
+    # print('normalize matrix (by column): \n', normalize_columns_separately(dataset, ['headers', 'spaces']))
+    #
+    # print("\nRegressing\n")
+    # single_linear_regression(dataset,'headers', 'spaces')
+    #
+    # print('\nTesting clean')
+    # test_linear_regression('data-clean.csv', ['X0','X1'], 'Y')
+    #
+    # print('\nTesting good')
+    # test_linear_regression('data-good.csv', ['X0', 'X1'], 'Y')
+    #
+    # print('\nTesting noisy')
+    # test_linear_regression('data-noisy.csv', ['X0', 'X1'], 'Y')
+    #
+    # print('\nTesting bodyfat')
+    # bodydata = data.Data('body_fat_addedtype.csv')
+    # linear_regression(bodydata, ['weight'], 'bodyfat', verbose=True)
+    #
+    # print('\nTesting bodyfat, multiple variables')
+    # bodydata = data.Data('body_fat_addedtype.csv')
+    # linear_regression(bodydata, ['weight', 'abdomen'], 'bodyfat', verbose=True)
+    #
+    # print('\nPCA-ing')
+    # pcaable = Data('testdata3.csv')
+    # pca(pcaable, ['headers', 'spaces', 'bad'], False)
+
+    print('\nK Means quality test')
+    print(kmeans_quality(np.matrix([[2], [3], [4]]), 3))
 
 
 if __name__ == "__main__":

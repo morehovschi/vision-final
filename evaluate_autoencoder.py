@@ -75,15 +75,15 @@ def main(argv):
 
     # show how the noisy image of my face and the autoencoder prediction for it
     show_row_image(my_face[0], 64, 64, "my face with noise")
-    show_row_image(np.reshape(my_face_predict[0], (1, 4096)), 64, 64, "my face predicted")
+    show_row_image(np.reshape(my_face_predict[0], (1, 4096)), 64, 64, "my face denoised")
 
     # show the deteriorated Bill Gates photo and the autoencoder prediction for it
     show_row_image(bill[0], 64, 64, "deteriorated Bill")
-    show_row_image(bill_predict[0], 64, 64, "processed Bill")
+    show_row_image(bill_predict[0], 64, 64, "denoised Bill")
 
     # show the noisy and predicted versions of an image in the testset
-    show_row_image(np.reshape(x_test[7], (1, 4096)), 64, 64, "testset input")
-    show_row_image(np.reshape(testset_predict[7], (1, 4096)), 64, 64, "testset result")
+    show_row_image(np.reshape(x_test[7], (1, 4096)), 64, 64, "deteriorated testset image")
+    show_row_image(np.reshape(testset_predict[7], (1, 4096)), 64, 64, "denoised testset image")
 
 
 if __name__ == "__main__":

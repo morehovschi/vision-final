@@ -1,9 +1,7 @@
- """
-    Marius Orehovschi
-    S19
-    Project 2: Data Management
-    CS 251
-"""
+# Marius Orehovschi
+# S19
+# Project 2: Data Management
+# CS 251
 
 # Modified as part of CS 251 Project 4 (Spring 2019)
 import random

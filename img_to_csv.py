@@ -11,6 +11,7 @@
 
 import cv2
 import numpy as np
+import scipy
 import sys
 import os
 
@@ -161,12 +162,13 @@ def show_row_image(row, img_height, img_width, window_label=None):
     """
     resizes parameter row into an image with dimensions img_height and img_width and shows image
     """
+
     image = np.reshape(row, (img_height, img_width))
 
     if window_label is None:
-        cv2.imshow("row image", image)
-    else:
-        cv2.imshow(window_label, image)
+        window_label = "row_image"
+
+    cv2.imshow(window_label, image)
     cv2.waitKey()
 
 

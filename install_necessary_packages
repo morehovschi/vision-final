@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pip install keras
+pip install tensorflow==1.15
+pip install opencv-python-headless
