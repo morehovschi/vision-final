@@ -11,6 +11,4 @@ The run requires packages keras, tensorflow 1.15, and opencv. To install the req
 ### RUN:
 python3 evaluate_autoencoder.py
 
-### WRITE-UP + PICTURES:
-https://wiki.colby.edu/display/~moreho21/Marius+Orehovschi%27s+CS+365+Final+Project%3A+Linear+vs.+Non-Linear+Image+Restoration
-
+![Artifact removal](https://github.com/morehovschi/vision-final/blob/master/screenshot.png?raw=true)
